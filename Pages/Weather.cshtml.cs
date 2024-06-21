@@ -29,7 +29,7 @@ namespace catalog.Pages
             var ip = Request.Form["ip"];
             ViewData["ip"] = ip;
             var client = new HttpClient();
-            var address = $"http://{ip}/api/weather";
+            var address = $"http://{ip}/WeatherForecast";
             try
             {
                 var resp = client.GetAsync(address).Result;
